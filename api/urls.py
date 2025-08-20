@@ -3,5 +3,5 @@ from .views import get_equipment, equipment_ids
 
 urlpatterns = [
     path('equipment/<str:equipment_id>/', get_equipment, name='get_equipment'),
-    path('api/equipment_ids/',equipment_ids, name='equipment_ids'),
+    path('equipment_ids/',equipment_ids, name='equipment_ids'),
 ]
