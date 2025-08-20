@@ -12,3 +12,8 @@ def get_equipment(request, equipment_id):
 
     serializer = EquipmentSerializer(equipment)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def equipment_ids(request):
+    ids = Equipment.objects.values_list('equipment_id', flat=True) 
+    return Response(list(ids))
